@@ -28,7 +28,9 @@ def main():
     lambda_lim = calculate_lambda_lim(A, B, C, n)
     
     st.subheader("Risultati della verifica")
-    st.write(f"Valore calcolato di λ_lim: {lambda_lim:.2f}")
+    st.latex(r"\lambda_{lim} = 20 \cdot A \cdot B \cdot C / \sqrt{n}")
+    st.write(f"Sostituendo i valori numerici:")
+    st.latex(f"\lambda_{{lim}} = 20 \cdot {A:.2f} \cdot {B:.2f} \cdot {C:.2f} / \sqrt{{{n:.2f}}} = {lambda_lim:.2f}")
     
     lambda_input = st.number_input("Inserisci il valore di λ calcolato", value=30.0)
     
