@@ -12,7 +12,7 @@ def main():
     
     q_eff = st.number_input("Coefficiente di fluage effettivo (φ_eff)", min_value=0.0, step=0.1, value=2.0)
     A = 1 / (1 + 0.2 * q_eff) if q_eff > 0 else 0.7
-    st.latex(r" A = 1 / (1 + 0.2 * q_eff) ")
+    st.latex(r" A = 1 / (1 + 0.2 × q_{eff}) ")
     omega = st.number_input("Rapporto meccanico di armatura (ω)", min_value=0.0, step=0.1, value=0.02)
     B = np.sqrt(1 + 2 * omega) if omega > 0 else 1.1
     
